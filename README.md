@@ -1,4 +1,4 @@
-# Yii2 omnikassa component
+# Yii2 fullcalendar component
 
 ## Installation
 
