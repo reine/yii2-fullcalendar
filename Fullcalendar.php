@@ -2,11 +2,6 @@
 
 namespace edofre\fullcalendar;
 
-use yii\helpers\Html;
-use yii\helpers\Json;
-use yii\web\JsExpression;
-use yii\web\View;
-
 /**
  * Class Fullcalendar
  * @package edofre\fullcalendar
@@ -85,11 +80,7 @@ class Fullcalendar extends \yii\base\Widget
 	 */
 	public function run()
 	{
-		echo Html::beginTag('div', $this->options) . "\n";
-		echo Html::beginTag('div', ['class' => 'fc-loading', 'style' => 'display:none;']);
-		echo Html::encode($this->loading);
-		echo Html::endTag('div') . "\n";
-		echo Html::endTag('div') . "\n";
+		$this->echoLoadingTags();
 
 		$assets = CoreAsset::register($this->view);
 
@@ -107,7 +98,16 @@ class Fullcalendar extends \yii\base\Widget
 
 		$this->view->registerJs(implode("\n", [
 			"jQuery('#{$this->options['id']}').fullCalendar({$this->getClientOptions()});",
-		]), View::POS_READY);
+		]), \yii\web\View::POS_READY);
+	}
+
+	private function echoLoadingTags()
+	{
+		echo \yii\helpers\Html::beginTag('div', $this->options) . "\n";
+		echo \yii\helpers\Html::beginTag('div', ['class' => 'fc-loading', 'style' => 'display:none;']);
+		echo \yii\helpers\Html::encode($this->loading);
+		echo \yii\helpers\Html::endTag('div') . "\n";
+		echo \yii\helpers\Html::endTag('div') . "\n";
 	}
 
 	/**
@@ -117,7 +117,7 @@ class Fullcalendar extends \yii\base\Widget
 	 */
 	private function getClientOptions()
 	{
-		$options['loading'] = new JsExpression("function(isLoading, view ) {
+		$options['loading'] = new \yii\web\JsExpression("function(isLoading, view ) {
 			jQuery('#{$this->options['id']}').find('.fc-loading').toggle(isLoading);
         }");
 
@@ -125,7 +125,6 @@ class Fullcalendar extends \yii\base\Widget
 		$options['events'] = $this->events;
 		$options = array_merge($options, $this->clientOptions);
 
-		return Json::encode($options);
+		return \yii\helpers\Json::encode($options);
 	}
-
 }

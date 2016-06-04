@@ -56,5 +56,4 @@ class Event extends \yii\base\Model
 			[['editable', 'startEditable', 'durationEditable', 'overlap'], 'boolean'],
 		];
 	}
-
 }
