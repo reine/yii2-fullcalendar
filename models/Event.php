@@ -2,6 +2,10 @@
 
 namespace edofre\fullcalendar\models;
 
+/**
+ * Class Event
+ * @package edofre\fullcalendar\models
+ */
 class Event extends \yii\base\Model
 {
 	/** Rendering options */

@@ -101,6 +101,9 @@ class Fullcalendar extends \yii\base\Widget
 		]), \yii\web\View::POS_READY);
 	}
 
+	/**
+	 * Echo the tags to show the loading state for the calendar
+	 */
 	private function echoLoadingTags()
 	{
 		echo \yii\helpers\Html::beginTag('div', $this->options) . "\n";
