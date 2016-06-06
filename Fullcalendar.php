@@ -84,8 +84,7 @@ class Fullcalendar extends \yii\base\Widget
 
 		$assets = CoreAsset::register($this->view);
 
-		// Register the theme
-		if ($this->theme === true) {
+		if ($this->theme === true) { // Register the theme
 			ThemeAsset::register($this->view);
 		}
 
@@ -124,7 +123,6 @@ class Fullcalendar extends \yii\base\Widget
 			jQuery('#{$this->options['id']}').find('.fc-loading').toggle(isLoading);
         }");
 
-		// Load the events
 		$options['events'] = $this->events;
 		$options = array_merge($options, $this->clientOptions);
 
