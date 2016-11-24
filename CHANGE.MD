@@ -1,6 +1,12 @@
 Change Log: `yii2-fullcalendar`
 ===============================
 
+## Version 1.0.4
+
+**Date:** 24-Nov-2016
+
+- Update fullcalendar language locations
+
 ## Version 1.0.3
 
 **Date:** 18-Nov-2016
