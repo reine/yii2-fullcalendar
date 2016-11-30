@@ -20,7 +20,7 @@ to the ```require``` section of your `composer.json` file.
 
 ## Usage
 
-### Fullcalender can be created as following, all options are optional, below is just an example of most options
+### Fullcalendar can be created as following, all options are optional, below is just an example of most options
 ```php
 <?= edofre\fullcalendar\Fullcalendar::widget([
         'options'       => [
