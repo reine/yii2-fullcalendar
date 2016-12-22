@@ -55,6 +55,7 @@ class CoreAsset extends \yii\web\AssetBundle
             $this->js[] = 'gcal.js';
         }
 
-        parent::registerAssetFiles($view);
+        // We need to return the parent implementation otherwise the scripts are not loaded
+        return parent::registerAssetFiles($view);
     }
 }
