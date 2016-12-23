@@ -1,6 +1,13 @@
 Change Log: `yii2-fullcalendar`
 ===============================
 
+## Version 1.0.5
+
+**Date:** 22-Dec-2016
+
+- Update fullcalendar dependencies
+- Inherit Fullcalendar Model to remove unused attributes
+
 ## Version 1.0.4
 
 **Date:** 24-Nov-2016
