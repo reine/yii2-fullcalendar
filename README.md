@@ -7,13 +7,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer.phar require edofre/yii2-fullcalendar "@dev"
+$ php composer.phar require edofre/yii2-fullcalendar "V1.0.5"
 ```
 
 or add
 
 ```
-"edofre/yii2-fullcalendar": "@dev"
+"edofre/yii2-fullcalendar": "V1.0.5"
 ```
 
 to the ```require``` section of your `composer.json` file.
@@ -36,7 +36,7 @@ to the ```require``` section of your `composer.json` file.
                     console.log(event);
                 }
             "),
-        
+
         ],
         'events'        => Url::to(['calendar/events', 'id' => $uniqid]),
     ]);
@@ -47,7 +47,7 @@ to the ```require``` section of your `composer.json` file.
 
 #### PHP array
 ```php
-<?php 
+<?php
     $events = [
         new Event([
             'title' => 'Appointment #' . rand(1, 999),
