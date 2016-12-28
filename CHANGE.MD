@@ -1,6 +1,12 @@
 Change Log: `yii2-fullcalendar`
 ===============================
 
+## Version 1.0.6
+
+**Date:** 22-Dec-2016
+
+- Move files to src directory
+
 ## Version 1.0.5
 
 **Date:** 22-Dec-2016
