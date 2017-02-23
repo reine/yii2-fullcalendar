@@ -1,35 +1,46 @@
 {
-  "name": "edofre/yii2-fullcalendar",
-  "description": "Yii2 widget for fullcalendar",
-  "require": {
-    "php": ">=5.5.0",
-    "yiisoft/yii2": "*",
-    "yiisoft/yii2-jui": "*",
-    "bower-asset/fullcalendar": "v3.1.0"
-  },
-  "keywords": [
-    "fullcalendar",
-    "javascript",
-    "event",
-    "calendar"
-  ],
-  "homepage": "https://github.com/edofre/yii2-fullcalendar",
-  "type": "yii2-extension",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Edo Freriks",
-      "email": "edofre@gmail.com"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "edofre\\fullcalendar\\": "src"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  }
+	"name": "edofre/yii2-fullcalendar",
+	"description": "Yii2 widget for fullcalendar",
+	"require": {
+		"php": ">=5.5.0",
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-jui": "*",
+		"bower-asset/fullcalendar": "v3.2.0"
+	},
+	"keywords": [
+		"fullcalendar",
+		"javascript",
+		"event",
+		"calendar"
+	],
+	"homepage": "https://github.com/edofre/yii2-fullcalendar",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Edo Freriks",
+			"email": "edofre@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+		  "edofre\\fullcalendar\\": "src"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		},
+		"asset-installer-paths": {
+			"npm-asset-library": "vendor/npm",
+			"bower-asset-library": "vendor/bower"
+		},
+		"asset-repositories": [
+			{
+				"name": "bower-asset/fullcalendar",
+				"type": "bower-vcs",
+				"url": "git://github.com/fullcalendar/fullcalendar.git"
+			}
+		]
+	}
 }
